@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - name: Install dependencies
-        run: yarn
+        run: yarn && npx playwright install
       - name: Lint
         run: yarn lint
       - name: Prettier
